@@ -1,0 +1,182 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+  scroll-behavior: smooth;
+}
+
+/* Biar section nggak ketutup navbar */
+section {
+  scroll-margin-top: 100px;
+}
+
+/* =========================
+   NAVBAR (FEMININE)
+========================= */
+.navbar {
+  background-color: #f8d7e4;
+}
+
+.navbar-brand {
+  color: #5a2a40;
+  font-weight: 700;
+}
+
+.navbar-brand:hover {
+  color: #e65395;
+}
+
+.navbar .nav-link {
+  color: #5a2a40;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: #c2185b;
+}
+
+.navbar .nav-link.active {
+  color: #c2185b !important;
+  font-weight: 600;
+  border-bottom: 2px solid #c2185b;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+.profile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+}
+
+/* =========================
+   UNIVERSAL CARD HOVER
+========================= */
+.hover-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 45px rgba(194, 24, 91, 0.25);
+}
+
+/* Icon ikut animasi */
+.hover-card i {
+  transition: transform 0.3s ease;
+}
+
+.hover-card:hover i {
+  transform: scale(1.1);
+}
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+#education h2 {
+  color: #5a2a40;
+}
+
+#education .card {
+  border-radius: 16px;
+}
+
+/* =========================
+   SKILL SECTION
+========================= */
+#skill h2 {
+  color: #5a2a40;
+}
+
+#skill .card {
+  border-radius: 15px;
+}
+
+#skill .card i {
+  color: #c2185b;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background-color: #f8d7e4;
+  color: #5a2a40;
+}
+
+.footer h5 {
+  letter-spacing: 0.5px;
+}
+
+.social-link {
+  color: #5a2a40;
+  font-size: 1.3rem;
+  transition: 0.3s ease;
+}
+
+.social-link:hover {
+  color: #c2185b;
+  transform: translateY(-3px);
+}
+
+.footer p {
+  color: #6d4a5a;
+}
+
+/* =========================
+   LOGO BOX
+========================= */
+
+.logo-box {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.logo-box img {
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
+}
+
+#achievement h2 {
+  color: #5a2a40;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-body img {
+  max-height: 85vh;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.modal-content {
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
