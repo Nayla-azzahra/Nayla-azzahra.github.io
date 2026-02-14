@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk mamass tersayang ❤️</title> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f6eee9;
+color:#4b2e2e;
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+section{
+min-height:100vh;
+padding:60px 20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+.hero{
+background:linear-gradient(135deg,#7a1f2b,#d98c9c);
+color:white;
+width:100%;
+position:relative;
+}
+.card{
+background:white;
+padding:25px;
+margin:15px;
+border-radius:16px;
+max-width:600px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+transition:0.3s;
+cursor:default;
+}
+.card:hover{
+transform:translateY(-5px) scale(1.02);
+}
+button{
+background:#7a1f2b;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+button:hover{
+background:#a83244;
+}
+#surprise{
+display:none;
+background:#fff0f3;
+flex-direction:column;
+}
+footer{
+padding:30px;
+text-align:center;
+background:#7a1f2b;
+color:white;
+}
+</style>
+</head>
+<body>
+
+<!-- YouTube Music -->
+<iframe id="bgMusic" width="0" height="0"
+ src="https://www.youtube.com/embed/uaNrFn17YtI?loop=1&playlist=uaNrFn17YtI"
+ frameborder="0"
+ allow="autoplay; encrypted-media">
+</iframe>
+<p style="font-size:14px;color:#555;">Klik halaman sekali untuk memutar musik 🎧</p>
+
+<section class="hero show">
+<h1>Haloo mamasss ku sayangg ❤️</h1> 
+<p>Aku bikin ruang kecil ini… cuma buat satu orang.</p>
+<button onclick="scrollToNext()">Masuk Pelan-pelan ✨</button>
+</section>
+
+<section>
+<h2>Awal Cerita Kita</h2>
+<div class="card">
+<p>
+Inget pertama kali kita chattanl?   
+Awalnya biasa aja… tapi entah kenapa sejak itu semuanya berubah jadi lebih seru.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Momen Kecil yang Aku Suka</h2>
+<div class="card">Cara kamu yang selalu mengusahakan apapun itu</div> 
+<div class="card">Ketika aku di dekat kamu</div> 
+<div class="card">Cara kamu memperlakukan aku dengan baik</div> 
+</section>
+
+<section>
+<h2>Hal yang Diam-diam Aku Perhatiin</h2>
+<div class="card">
+Kamu selalu berusaha kuat… bahkan waktu capek.
+Dan itu bikin aku kagum terus.
+</div>
+</section>
+
+<section>
+<h2>Kenangan Lucu 😆</h2>
+<div class="card">
+Waktu kamuuu buang kartuu parkirr dan berakhir kita menghabiskan waktuu yang cukup lama😂 
+</div>
+</section>
+
+<section>
+<h2>Rahasia Kecil 🤫</h2>
+<p>Scroll sampai bawah… atau tekan tombol ini.</p>
+<button onclick="showSurprise()">Buka Surprise ❤️</button>
+</section>
+
+<section id="surprise">
+<h2>Untuk Kamu…</h2>
+<div class="card">
+Terima kasih sudah hadir di hidupku.  
+Terima kasih untuk hal-hal kecil yang mungkin kamu anggap biasa…  
+padahal buat aku itu berarti banget.
+</div>
+
+<div class="card">
+Aku nggak tahu masa depan bakal kayak gimana…  
+tapi aku harap kita tetap jalan bareng, pelan-pelan, sambil ketawa.
+</div>
+</section>
+
+<footer>
+Dibuat dengan banyak rasa sayang ❤️
+</footer>
+
+<script>
+function scrollToNext(){
+window.scrollTo({top:window.innerHeight,behavior:'smooth'});
+}
+function showSurprise(){
+document.getElementById('surprise').style.display='flex';
+document.getElementById('surprise').scrollIntoView({behavior:'smooth'});
+}
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+sec.classList.add("show");
+}
+});
+});
+
+// Klik halaman untuk mulai musik
+document.body.addEventListener("click", function() {
+ var music = document.getElementById('bgMusic');
+ var src = music.src;
+ if(!src.includes("autoplay=1")) music.src += "&autoplay=1";
+});
+</script>
+
+</body>
+</html>
