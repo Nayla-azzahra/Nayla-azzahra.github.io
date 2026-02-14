@@ -80,3 +80,10 @@ function handleNoClick() {
 function handleYesClick() {
     window.location.href = "yes_page.html";
 }
+
+  const music = document.getElementById("bg-music");
+
+  music.addEventListener("loadedmetadata", function() {
+    music.currentTime = music.duration / 2; // mulai dari tengah
+    music.play();
+  });
